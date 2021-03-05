@@ -2,6 +2,7 @@ package Project01;
 
 public enum PeopleType
 {
+    healer ("Heely"),
     warrior ("Solder"),
     wizzard  ("Tricky");
 

@@ -19,14 +19,17 @@ public class Tribe
         nationName = nation;
         tribeName = tribe;
         tribeLifePoints = lifePoints;
-        for(int i = 0; i < 2; i++)
+        for(int i = 0; i < 4; i++){
+            if(i % 3 == 0)
+                members.add(new People(nationName, tribeName, PeopleType.healer, tribeLifePoints / 2));
             if(i % 2 == 0)
                 members.add(new People(nationName, tribeName, PeopleType.warrior, tribeLifePoints / 2));
             else
-                members.add(new People(nationName, tribeName, PeopleType.wizzard, tribeLifePoints / 2));
+                members.add(new People(nationName, tribeName, PeopleType.wizzard, tribeLifePoints / 2)); }
         for(int i = 0; i < members.size(); i++)
             livingMembers.addAll(members);
     }
+
 
     public ArrayList<People> getLivingTribeMembers()
     {
