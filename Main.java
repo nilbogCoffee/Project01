@@ -17,11 +17,11 @@ public class Main {
      */
     public static void main(String[] args)
     {
-       // TODO: modularize this value to a base amount to be used by all nations
-       int gameLifePoints = 5000;
-       ArrayList<Nation> nations = new ArrayList<>() ; // nations create tribes create people
-       PlayGame game = new PlayGame();
-       // TODO: reformat...
+        // TODO: modularize this value to a base amount to be used by all nations
+        int gameLifePoints = 5000;
+        ArrayList<Nation> nations = new ArrayList<>() ; // nations create tribes create people
+        PlayGame game = new PlayGame();
+        // TODO: reformat...
         nations.add(new Nation("Idiots", (gameLifePoints / 3))); //Probably delete these nations eventually
         nations.add(new Nation("Minions", (gameLifePoints) / 3));
         nations.add(new Nation("Wolves", (gameLifePoints) / 3)); //Kimberly Wolf's Tribe
@@ -29,17 +29,24 @@ public class Main {
         // TODO
         // TODO: attn shane, add your nation here and then delete this TODO and the 2 encapsulating it
         // TODO
-	   // could add and delete nations. return number of nations + 1 from add and number of nations -1 from remove.
-	   for(int i = 0; i < 40; i++)
-       {
+        int gameLifePoints = 3000;
+        ArrayList<Nation> nations = new ArrayList<>() ; // nations create tribes create people
+        PlayGame game = new PlayGame();
+        nations.add(new Nation("Idiots", (gameLifePoints / 3))); //Probably delete these nations eventually
+        nations.add(new Nation("Minions", (gameLifePoints) / 3));
+
+        nations.add(new Nation("Wolves", (gameLifePoints) / 3)); //Kimberly Wolf's Tribe
+        // could add and delete nations. return number of nations + 1 from add and number of nations -1 from remove.
+        for(int i = 0; i < 40; i++)
+        {
            System.out.println("Round number: " + i);
            if (game.playOneRound(nations))
            {
                System.out.println("There is a winner!");
                break; // game over
            }
-       }
+        }
 
-	   System.out.println("The winning nation is " + game.getWinner() + ".");
+        System.out.println("The winning nation is " + game.getWinner() + ".");
     }
 }

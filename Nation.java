@@ -38,6 +38,9 @@ public class Nation
         for(int i = 0; i < 3; i++)
         {
             this.tribes.add(new Tribe(nationName, "Tribe" + i, nationLifePoints / 3));
+        for(int i = 0; i < 4; i++)
+        {
+            this.tribes.add(new Tribe(nationName, "Tribe" + i, nationLifePoints / 4));
         }
         population.addAll(getNationPopulation());
         livingPopulation.addAll(population);
@@ -47,10 +50,7 @@ public class Nation
      * Returns:
      *  (Boolean) - class member nationLifePoints (int) is greater than 0. When False, a Nation has lost.
      */
-    public Boolean isNationAlive()
-    {
-        return (nationLifePoints > 0);
-    }
+    public Boolean isNationAlive() { return (nationLifePoints > 0); }
 
     /**
      * Clears and reloads People into livingPopulation Array List and recalculates nationLifePoints based upon the new
