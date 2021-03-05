@@ -12,6 +12,18 @@ public class People
     private int myLifePoints;
 
 
+    /**
+     * Constructor for People class.
+     *
+     * Parameters:
+     *  nation (String) - which Nation the People instance belongs to
+     *  tribe (String) - which Tribe the People instance belongs to
+     *  person (PeopleType) - designates the People's PeopleType enum as warrior, wizard, healer, etc.
+     *  lifePoints (int) - how much damage a People can take before being removed from play
+     *
+     * Returns:
+     *  People
+     */
     public People(String nation, String tribe, PeopleType person, int lifePoints)
     {
         myNation = nation;
@@ -21,33 +33,59 @@ public class People
         myLifePoints = lifePoints;
     }
 
-    public PeopleType getType()
-    {
-        return me;
-    }
+    /**
+     * Returns:
+     *  me (PeopleType) - class member, designates whether is warrior, wizard, healer, etc
+     *
+     * Notes:
+     *  not yet used.
+     */
+    public PeopleType getType() { return me; }
 
-    public String getTribe()
-    {
-        return myTribe;
-    }
+    /**
+     * Returns:
+     *  myTribe (String) - class member, designates which tribe the People belongs to. Corresponds to tribeName member
+     *                         in Tribe class
+     *
+     * Notes:
+     *  not yet used.
+     */
+    public String getTribe() { return myTribe; }
 
+    /**
+     * Returns:
+     *  myNation (String) - class member, designates which nation the People belongs to. Corresponds to nationName
+     *                          member in both Nation and Tribe class.
+     */
     public String getNation()
-    {
-        return myNation;
-    }
+    { return myNation; }
 
-    public Boolean isPersonAlive()
-    {
-        return (myLifePoints > 0);
-    }
+    /**
+     * Returns:
+     *  (Boolean) - if class member myLifePoints (int) greater than zero. Used to decide whether or not the People
+     *                  should be removed from play
+     */
+    public Boolean isPersonAlive() { return (myLifePoints > 0); }
 
-    public int getLifePoints()
-    {
-        return myLifePoints;
-    }
+    /**
+     * Returns:
+     *  myLifePoints (int) - class member, amount of total damage a People can take in all encounters before being
+     *                          removed from play.
+     */
+    public int getLifePoints() { return myLifePoints; }
 
+    /**
+     * Not yet implemented.
+     *
+     * Parameters:
+     *  otherPerson (People)
+     *
+     * Notes:
+     *  not yet implemented nor used.
+     */
     public void encounterStrategy(People otherPerson)
     {
+        // TODO: implement later
         if(myNation == otherPerson.getNation())
         {
             // There will be an ugly confrontation
@@ -66,15 +104,29 @@ public class People
     }
 
 
-    public void reduceLifePoints(int points)
-    {
-        myLifePoints = myLifePoints - points;
-    }
+    /**
+     * Deals the damage from an encounter to a People's life points.
+     *
+     * Parameters:
+     *  points (int) - amount of damage to subtract from a People's life points after an encounter
+     *
+     * Notes:
+     *  not yet used.
+     */
+    // TODO: simplify
+    public void reduceLifePoints(int points) { myLifePoints = myLifePoints - points; }
 
 
+    /**
+     * Returns:
+     *  result (String) - information about a People's nation, tribe, type, and current health, separated by tabs
+     */
     public String toString()
     {
-        String result = new String( myNation + "\t" +  myTribe + "\t" + me + "\t" + myDescription + "\t" + myLifePoints);
+        // TODO: simplify
+        String result = new String(
+                myNation + "\t" +  myTribe + "\t" + me + "\t" + myDescription + "\t" + myLifePoints
+        );
         return result;
     }
 }
