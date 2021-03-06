@@ -24,8 +24,9 @@ public class Main {
         // TODO: reformat...
         nations.add(new Nation("Idiots", (gameLifePoints / 3))); //Probably delete these nations eventually
         nations.add(new Nation("Minions", (gameLifePoints) / 3));
-        nations.add(new Nation("Wolves", (gameLifePoints) / 3)); //Kimberly Wolf's Tribe
+        nations.add(new Nation("Wolves", (gameLifePoints) / 3)); //Kimberly Wolf's Nation
         nations.add(new Nation("Bogfrogs", (gameLifePoints) / 3)); // Eric Gorski's Nation
+        nations.add(new Nation("Goblins",(gameLifePoints) / 3)); // Shane Houghton's Nation
         // TODO
         // TODO: attn shane, add your nation here and then delete this TODO and the 2 encapsulating it
         // TODO
